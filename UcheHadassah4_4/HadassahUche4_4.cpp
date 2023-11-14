@@ -8,8 +8,8 @@ void swap(int&, int&);
 void Reverse(int[], int);
 int main()
 {
-	int array[] = { 1,2,3,4,5 };//Hard coded the array inputs
-	int size = 5;
+	int array[] = { 1,2,3,4,5,6 };//Hard coded the array inputs
+	int size = 6;
 	cout << "\nThe array: ";
 	for (int i = 0; i < size; i++)//Outputs the array
 	{
