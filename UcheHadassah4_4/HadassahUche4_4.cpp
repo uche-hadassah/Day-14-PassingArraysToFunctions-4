@@ -1,11 +1,6 @@
-/*Use the function swap (shown on slide 57 on Functions-Revision, pass-by-reference) 
-to write a void function called Reverse that takes as parameters an integer array a1 
-and the array size (as integer n) and reverses the array a1 so that its last element 
-becomes first, its second-to-last becomes its second etc. (NOTE: This function alters 
-the array a1. You should not use any other array to store the reversed version).
-Write a main program to test your function by printing the array before the call to 
-Reverse and after. (You need not use user defined array here. You can hard-code the 
-input array in the main program using some initializers)*/
+/*Uche Hadassah
+This program reverses the position of elements in the array such that the last element becomes the first
+and vice versa. It makes use of the swap function*/
 #include<iostream>
 using namespace std;
 //Function Prototypes
@@ -13,16 +8,16 @@ void swap(int&, int&);
 void Reverse(int[], int);
 int main()
 {
-	int array[] = { 1,2,3,4,5 };
+	int array[] = { 1,2,3,4,5 };//Hard coded the array inputs
 	int size = 5;
 	cout << "\nThe array: ";
-	for (int i = 0; i < size; i++)
+	for (int i = 0; i < size; i++)//Outputs the array
 	{
 		cout << array[i];
 	}
-	Reverse(array, size);
+	Reverse(array, size);//calls the Reverse function
 	cout << "\nThe new array is: ";
-	for (int j = 0; j < size; j++)
+	for (int j = 0; j < size; j++)//Outputs the Reversed array
 	{
 		cout << array[j];
 	}
@@ -32,7 +27,7 @@ int main()
 //The function from slide 57
 void swap(int& a, int& b)
 {
-	int temp = a;
+	int temp = a;//Initializes a temporary variable to the first element
 	a = b;
 	b = temp;
 }
@@ -42,8 +37,8 @@ void Reverse(int a1[], int n)
 	int i = 0;
 	do
 	{
-		swap(a1[i], a1[n-1]);
-		if (i == n)
+		swap(a1[i], a1[n-1]);//Calls the swap function
+		if (i == n)//Ends once they meet in the middle
 		{
 			break;
 		}
