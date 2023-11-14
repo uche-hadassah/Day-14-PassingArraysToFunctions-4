@@ -13,17 +13,42 @@ void swap(int&, int&);
 void Reverse(int[], int);
 int main()
 {
+	int array[] = { 1,2,3,4,5 };
+	int size = 5;
+	cout << "\nThe array: ";
+	for (int i = 0; i < size; i++)
+	{
+		cout << array[i];
+	}
+	Reverse(array, size);
+	cout << "\nThe new array is: ";
+	for (int j = 0; j < size; j++)
+	{
+		cout << array[j];
+	}
+	
+}
 
+//The function from slide 57
+void swap(int& a, int& b)
+{
+	int temp = a;
+	a = b;
+	b = temp;
 }
 
 void Reverse(int a1[], int n)
 {
+	int i = 0;
+	do
+	{
+		swap(a1[i], a1[n-1]);
+		if (i == n)
+		{
+			break;
+		}
+		i++;
+		n--;
+	} while (i < n - 1);
+}
 
-}
-//The function from slide 57
-void swap(int &a, int &b) 
-{
-  int temp=a;
-  a=b;
-  b=temp;
-}
